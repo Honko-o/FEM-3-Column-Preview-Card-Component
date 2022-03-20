@@ -1,0 +1,76 @@
+@use '../core/' as *;
+
+.cards {
+    @include flex(center, center, column);
+    // Change Cards To Rows on Desktop
+    @media (min-width: 991px){
+        @include flex(center, center, row);
+    }
+    background-color: $neutral-gray-100;
+    min-height: 100vh;
+}
+.card {
+    width: 278px;
+    padding: 35px;
+    &.sedans {
+        background-color: $primary-orange-100;
+        margin-top: 20px;
+        border-radius: 10px 10px 0px 0px;
+        .link {
+            color: $primary-orange-100;
+        }
+        @media (min-width: 991px) {
+            border-radius: 10px 0px 0px 10px;
+        }
+    }
+    &.suvs {
+        background-color: $primary-cyan-500;
+        .link {
+            color: $primary-cyan-500;
+        }
+    }
+    &.luxury {
+        background-color: $primary-cyan-900;
+        margin-bottom: 20px;
+        border-radius: 0px 0px 10px 10px;
+        .link {
+            color: $primary-cyan-900;
+        }
+        @media (min-width: 991px) {
+            border-radius: 0px 10px 10px 0px;
+        }
+    }
+    // Reset Margin Above or Equal Medium Screen
+    &.sedans,
+    &.suvs,
+    &.luxury {
+        .link {
+            border: 2px solid $neutral-gray-100;
+            &:hover {
+                background-color: transparent;
+                color: $neutral-gray-100;
+            }   
+        }
+        @media (min-width: 991px) {
+            margin: 0;
+        }
+    }
+    .card-title {
+        color: $neutral-gray-100;
+        text-transform: uppercase;
+        font-family: 'Big Shoulders Display', cursive;
+    }
+    .card-description {
+        color: $paragraph-color;
+        line-height: 1.6;
+        font-family: 'Lexend Deca', sans-serif;
+    }
+    .link {
+        display: block;
+        width: fit-content;
+        background-color: $neutral-gray-100;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-family: 'Lexend Deca', sans-serif;
+    }
+}

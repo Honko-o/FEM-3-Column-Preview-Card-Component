@@ -1,0 +1,119 @@
+/*
+    Prefixer Mixin
+    Mixin to add Vendor Prefixes to CSS Properties
+*/
+/*
+    Overlay Mixin
+    Mixin To add Basic Overlay properties
+*/
+/* 
+    Flexbox Mixin
+    Mixin To Apply Flexbox Properties
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+}
+@media (min-width: 991px) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.card {
+  width: 278px;
+  padding: 35px;
+}
+.card.sedans {
+  background-color: #e38826;
+  margin-top: 20px;
+  border-radius: 10px 10px 0px 0px;
+}
+.card.sedans .link {
+  color: #e38826;
+}
+@media (min-width: 991px) {
+  .card.sedans {
+    border-radius: 10px 0px 0px 10px;
+  }
+}
+.card.suvs {
+  background-color: #006970;
+}
+.card.suvs .link {
+  color: #006970;
+}
+.card.luxury {
+  background-color: #004241;
+  margin-bottom: 20px;
+  border-radius: 0px 0px 10px 10px;
+}
+.card.luxury .link {
+  color: #004241;
+}
+@media (min-width: 991px) {
+  .card.luxury {
+    border-radius: 0px 10px 10px 0px;
+  }
+}
+.card.sedans .link, .card.suvs .link, .card.luxury .link {
+  border: 2px solid #f2f2f2;
+}
+.card.sedans .link:hover, .card.suvs .link:hover, .card.luxury .link:hover {
+  background-color: transparent;
+  color: #f2f2f2;
+}
+@media (min-width: 991px) {
+  .card.sedans, .card.suvs, .card.luxury {
+    margin: 0;
+  }
+}
+.card .card-title {
+  color: #f2f2f2;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+}
+.card .card-description {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  font-family: "Lexend Deca", sans-serif;
+}
+.card .link {
+  display: block;
+  width: fit-content;
+  background-color: #f2f2f2;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+/*# sourceMappingURL=main.css.map */
