@@ -48,10 +48,15 @@ html {
     align-items: center;
   }
 }
+.cards svg {
+  position: relative;
+  left: -2px;
+  top: -5px;
+}
 
 .card {
-  width: 278px;
-  padding: 35px;
+  width: 277px;
+  padding: 42px;
 }
 .card.sedans {
   background-color: #e38826;
@@ -95,25 +100,32 @@ html {
 @media (min-width: 991px) {
   .card.sedans, .card.suvs, .card.luxury {
     margin: 0;
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
 }
 .card .card-title {
   color: #f2f2f2;
   text-transform: uppercase;
   font-family: "Big Shoulders Display", cursive;
+  font-size: 2.4rem;
+  margin-bottom: -8px;
 }
 .card .card-description {
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.6;
   font-family: "Lexend Deca", sans-serif;
+  margin-bottom: 90px;
+  font-size: 0.9rem;
 }
 .card .link {
   display: block;
   width: fit-content;
   background-color: #f2f2f2;
-  padding: 15px 30px;
+  padding: 10px 25px;
   border-radius: 30px;
   font-family: "Lexend Deca", sans-serif;
+  margin-top: -30px;
 }
 
 /*# sourceMappingURL=main.css.map */

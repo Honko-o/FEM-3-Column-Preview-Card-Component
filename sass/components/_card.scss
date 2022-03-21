@@ -8,10 +8,15 @@
     }
     background-color: $neutral-gray-100;
     min-height: 100vh;
+    svg {
+        position: relative;
+        left: -2px;
+        top: -5px;
+    }
 }
 .card {
-    width: 278px;
-    padding: 35px;
+    width: 277px;
+    padding: 42px;
     &.sedans {
         background-color: $primary-orange-100;
         margin-top: 20px;
@@ -53,24 +58,34 @@
         }
         @media (min-width: 991px) {
             margin: 0;
+            padding: {
+                top: 45px;
+                bottom: 45px;
+            }
         }
     }
     .card-title {
         color: $neutral-gray-100;
         text-transform: uppercase;
         font-family: 'Big Shoulders Display', cursive;
+        font-size: 2.4rem;
+        margin-bottom: -8px;
     }
     .card-description {
         color: $paragraph-color;
         line-height: 1.6;
         font-family: 'Lexend Deca', sans-serif;
+        margin-bottom: 90px;
+        font-size: 0.9rem;
     }
     .link {
         display: block;
         width: fit-content;
         background-color: $neutral-gray-100;
-        padding: 15px 30px;
+        padding: 10px 25px;
         border-radius: 30px;
         font-family: 'Lexend Deca', sans-serif;
+        margin-top: -30px;
+        
     }
 }
